@@ -64,7 +64,7 @@
             <h2 class="h4 fw-bold text-teal mb-3">Enquiry Form</h2>
             <p class="small text-muted mb-4">Fields marked with an asterisk (*) are required.</p>
 
-            <form id="contact-form" action="contact.html#form-result" method="get" novalidate>
+            <form id="contact-form" novalidate>
               <div class="mb-3">
                 <label for="name" class="form-label fw-semibold">Full Name *</label>
                 <input
@@ -102,7 +102,7 @@
                   placeholder="Minimum 6 characters"
                   autocomplete="new-password"
                 />
-                <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                <div class="invalid-feedback">Enter a password with at least 6 characters (not only spaces).</div>
               </div>
 
               <div class="mb-3">
@@ -114,7 +114,7 @@
                   placeholder="Repeat your password"
                   autocomplete="new-password"
                 />
-                <div class="invalid-feedback">Passwords do not match.</div>
+                <div class="invalid-feedback">Confirm your password. Both passwords must match.</div>
               </div>
 
               <div class="mb-3">
@@ -163,7 +163,7 @@
 
             <div class="form-result alert alert-success mt-4" id="form-result">
               <h3 class="h5 alert-heading fw-bold mb-1">Details Checked</h3>
-              <p class="mb-2">Thank you! Your enquiry has been received successfully.</p>
+              <p class="mb-2">All fields are valid. This demo does not send your enquiry.</p>
               <a href="contact.html#enquiry" class="btn btn-outline-success btn-sm">Submit another enquiry</a>
             </div>
           </div>
@@ -230,7 +230,7 @@
           <button type="submit" class="btn btn-teal w-100">Subscribe Now</button>
         </form>
         <div id="popupSuccessMsg" class="alert alert-success mt-3 py-2 small" style="display: none;">
-          🎉 Thank you for subscribing! Check your inbox soon.
+          Thank you! Your email passed validation. This demo does not send emails.
         </div>
       </div>
     </div>
