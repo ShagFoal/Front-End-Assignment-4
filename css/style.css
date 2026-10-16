@@ -1,0 +1,263 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background-color: #f7f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.text-teal {
+  color: #174b52 !important;
+}
+
+.bg-teal {
+  background-color: #174b52 !important;
+}
+
+.bg-teal-subtle {
+  background-color: #eaf3f4 !important;
+}
+
+.bg-light-mint {
+  background-color: #f1f7f8;
+}
+
+.custom-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8e2e4;
+}
+
+.navbar-nav .nav-link {
+  color: #31575c;
+  padding: 8px 12px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #9c5226;
+}
+
+.btn-teal {
+  background-color: #2f6f75;
+  color: #ffffff;
+  border: 1px solid #2f6f75;
+}
+
+.btn-teal:hover {
+  background-color: #174b52;
+  color: #ffffff;
+}
+
+.btn-outline-teal {
+  color: #2f6f75;
+  border: 1px solid #2f6f75;
+}
+
+.btn-outline-teal:hover {
+  background-color: #2f6f75;
+  color: #ffffff;
+}
+
+.sidebar-card {
+  border-top: 3px solid #2f6f75 !important;
+}
+
+.sidebar-nav a {
+  background-color: #f1f7f8;
+  color: #174b52;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a:focus-visible {
+  background-color: #dcebed;
+  color: #174b52;
+}
+
+.table-teal th {
+  background-color: #2f6f75;
+  color: #ffffff;
+}
+
+.footer-bg {
+  background-color: #174b52;
+}
+
+.hero-img {
+  height: 320px;
+}
+
+.card-thumb {
+  height: 180px;
+  object-fit: cover;
+}
+
+.carousel-img {
+  height: 480px;
+  object-fit: cover;
+}
+
+.author-img {
+  width: 80px;
+  height: 80px;
+}
+
+.contact-aside-img {
+  height: 200px;
+}
+
+.form-result {
+  display: none;
+}
+
+.form-result:target {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 220px;
+  }
+  .carousel-img {
+    height: 260px;
+  }
+}
+
+/* ==========================================================================
+   Assignment 4: Interactive JS Component Styles
+   ========================================================================== */
+
+/* Task 4: Smooth transition for background color change */
+body {
+  transition: background-color 0.4s ease;
+}
+
+/* Task 5: Date Time badge styling */
+.datetime-badge {
+  font-size: 0.82rem;
+  letter-spacing: 0.2px;
+  background-color: #f1f7f8;
+  color: #174b52;
+  border: 1px solid #c9dedf;
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Task 2: Custom Accordion */
+.custom-accordion {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-accordion-item {
+  border: 1px solid #d8e2e4;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-accordion-item:hover {
+  border-color: #2f6f75;
+}
+
+.custom-accordion-header {
+  width: 100%;
+  padding: 14px 18px;
+  background: #ffffff;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  color: #174b52;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-accordion-header:hover {
+  background-color: #f8fbfb;
+  color: #2f6f75;
+}
+
+.custom-accordion-icon {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #2f6f75;
+  transition: transform 0.3s ease;
+}
+
+.custom-accordion-item.active .custom-accordion-icon {
+  transform: rotate(45deg);
+}
+
+.custom-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+  background-color: #fbfdfd;
+}
+
+.custom-accordion-content {
+  padding: 14px 18px;
+  color: #495057;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid #edf2f4;
+}
+
+/* Task 3: Popup Modal */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 30, 35, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 16px;
+  backdrop-filter: blur(3px);
+}
+
+.custom-modal-box {
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: modalSlideDown 0.25s ease-out;
+}
+
+@keyframes modalSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+

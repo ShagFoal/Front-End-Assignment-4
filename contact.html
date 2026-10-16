@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Places to visit and walking routes in Astana." />
+    <title>Contact | Astana Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 custom-navbar">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-teal" href="index.html">Astana Travel</a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="places.html">Places</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="prices.html">Tours</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fw-semibold" aria-current="page" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="media-queries.html">City Guide</a>
+              </li>
+            </ul>
+            <div class="d-flex flex-wrap align-items-center gap-2 mt-2 mt-lg-0 ms-lg-3">
+              <span id="currentDateTime" class="datetime-badge">Loading date & time...</span>
+              <button id="changeBgBtn" type="button" class="btn btn-sm btn-outline-teal" title="Toggle background color">🎨 Theme</button>
+              <button id="openModalBtn" type="button" class="btn btn-sm btn-teal">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-4 px-sm-2">
+      <section class="mb-5">
+        <h1 class="display-6 fw-bold text-teal mb-2">Contact Us</h1>
+        <p class="text-secondary lead">Choose a route and send your questions or booking enquiry.</p>
+      </section>
+
+      <div class="row g-4">
+        <section class="col-lg-7 col-12" id="enquiry">
+          <div class="card shadow-sm border-light-subtle p-4">
+            <h2 class="h4 fw-bold text-teal mb-3">Enquiry Form</h2>
+            <p class="small text-muted mb-4">Fields marked with an asterisk (*) are required.</p>
+
+            <form id="contact-form" action="contact.html#form-result" method="get" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label fw-semibold">Full Name *</label>
+                <input
+                  id="name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  maxlength="80"
+                />
+                <div class="invalid-feedback">Name is required.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Email address *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light">@</span>
+                  <input
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                  />
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label fw-semibold">Password *</label>
+                <input
+                  id="password"
+                  type="password"
+                  class="form-control"
+                  placeholder="Minimum 6 characters"
+                  autocomplete="new-password"
+                />
+                <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label fw-semibold">Confirm Password *</label>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  class="form-control"
+                  placeholder="Repeat your password"
+                  autocomplete="new-password"
+                />
+                <div class="invalid-feedback">Passwords do not match.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="tour" class="form-label fw-semibold">Choose a Tour</label>
+                <select id="tour" class="form-select">
+                  <option selected>City Start (2 hours)</option>
+                  <option>Culture Day (4 hours)</option>
+                  <option>Full Astana (6 hours)</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold d-block">Preferred Contact Method</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="contactPref" id="prefEmail" value="email" checked />
+                  <label class="form-check-label" for="prefEmail">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="contactPref" id="prefPhone" value="phone" />
+                  <label class="form-check-label" for="prefPhone">Phone</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label fw-semibold">Message *</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  rows="4"
+                  placeholder="What would you like to ask or explore?"
+                  maxlength="1000"
+                ></textarea>
+                <div class="invalid-feedback">Message is required.</div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="consent" />
+                <label class="form-check-label small text-secondary" for="consent">
+                  I agree to receive tour route details via email.
+                </label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+              </div>
+
+              <button class="btn btn-teal px-4" type="submit">Submit Enquiry</button>
+            </form>
+
+            <div class="form-result alert alert-success mt-4" id="form-result">
+              <h3 class="h5 alert-heading fw-bold mb-1">Details Checked</h3>
+              <p class="mb-2">Thank you! Your enquiry has been received successfully.</p>
+              <a href="contact.html#enquiry" class="btn btn-outline-success btn-sm">Submit another enquiry</a>
+            </div>
+          </div>
+        </section>
+
+        <aside class="col-lg-5 col-12" id="about">
+          <div class="card sidebar-card shadow-sm border-light-subtle p-4 bg-light-mint">
+            <img src="images/contact.jpeg" alt="Sculpture in Astana" class="img-fluid rounded-3 mb-4 object-fit-cover contact-aside-img" />
+            <h2 class="h4 fw-bold text-teal mb-3">About Astana Travel</h2>
+            <p class="text-secondary mb-4">
+              Here you can discover iconic city landmarks, compare guided tour routes and plan your unforgettable stay in Astana.
+            </p>
+            <dl class="row mb-4">
+              <dt class="col-sm-4 text-teal">Location</dt>
+              <dd class="col-sm-8 text-secondary">Astana, Kazakhstan</dd>
+              <dt class="col-sm-4 text-teal">Project</dt>
+              <dd class="col-sm-8 text-secondary">Astana Travel · Web Technologies 1</dd>
+              <dt class="col-sm-4 text-teal">Author</dt>
+              <dd class="col-sm-8 text-secondary">Bilyalov Askhat · SE-2514</dd>
+            </dl>
+            <a href="prices.html" class="btn btn-outline-secondary w-100">Explore Routes</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer-bg text-white py-4 mt-5">
+      <div class="container text-center">
+        <div class="row gy-3">
+          <div class="col-12 col-md-6 text-md-start">
+            <strong class="fs-5">Astana Travel</strong>
+            <p class="small text-white-50 mb-0">Places and routes in Astana.</p>
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <p class="mb-1">Bilyalov Askhat</p>
+            <p class="small text-white-50 mb-0">SE-2514 · 2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Task 3: Popup Subscription Form Modal -->
+    <div id="subscriptionModal" class="custom-modal-overlay" style="display: none;">
+      <div class="custom-modal-box">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="h5 fw-bold text-teal mb-0">Subscribe to Astana Travel</h3>
+          <button type="button" id="closeModalBtn" class="btn-close" aria-label="Close"></button>
+        </div>
+        <p class="text-secondary small mb-3">
+          Get exclusive tour discounts, seasonal guides, and Astana event notifications directly in your inbox.
+        </p>
+        <form id="popupSubscribeForm" novalidate>
+          <div class="mb-3">
+            <label for="popupEmail" class="form-label fw-semibold">Email address *</label>
+            <input
+              type="email"
+              id="popupEmail"
+              class="form-control"
+              placeholder="name@example.com"
+              required
+            />
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <button type="submit" class="btn btn-teal w-100">Subscribe Now</button>
+        </form>
+        <div id="popupSuccessMsg" class="alert alert-success mt-3 py-2 small" style="display: none;">
+          🎉 Thank you for subscribing! Check your inbox soon.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

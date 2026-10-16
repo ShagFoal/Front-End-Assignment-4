@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Places to visit and walking routes in Astana." />
+    <title>Home | Astana Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 custom-navbar">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-teal" href="index.html">Astana Travel</a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="places.html">Places</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="prices.html">Tours</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="media-queries.html">City Guide</a>
+              </li>
+            </ul>
+            <div class="d-flex flex-wrap align-items-center gap-2 mt-2 mt-lg-0 ms-lg-3">
+              <span id="currentDateTime" class="datetime-badge">Loading date & time...</span>
+              <button id="changeBgBtn" type="button" class="btn btn-sm btn-outline-teal" title="Toggle background color">🎨 Theme</button>
+              <button id="openModalBtn" type="button" class="btn btn-sm btn-teal">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-4 px-sm-2">
+      <div class="row g-4">
+        <aside class="col-lg-3 col-12 d-none">
+          <div class="card sidebar-card p-3 shadow-sm border-light-subtle sticky-lg-top" style="top: 20px">
+            <h2 class="h6 fw-bold text-teal text-uppercase mb-3">Explore Astana</h2>
+            <nav class="sidebar-nav d-flex flex-column gap-2" aria-label="On this page">
+              <a href="#welcome">Welcome</a>
+              <a href="#highlights">Popular places</a>
+              <a href="#author">About author</a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="col-12">
+          <section class="p-4 p-md-5 mb-5 rounded-4 bg-light-mint" id="welcome">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-6 col-12">
+                <h1 class="display-5 fw-bold text-teal mb-3">Discover Astana</h1>
+                <p class="lead mb-4">Visit Baiterek, explore modern architecture, and take a walk through the city centre.</p>
+                <div class="d-flex flex-wrap gap-3">
+                  <a class="btn btn-teal btn-lg px-4" href="places.html">Explore Places</a>
+                  <a class="btn btn-outline-teal btn-lg px-4" href="prices.html">View Tours</a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <img src="images/astana.jpeg" alt="A view of Astana skyline" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover hero-img" />
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5" id="highlights">
+            <h2 class="h3 fw-bold text-teal mb-4">Popular Places</h2>
+
+            <div class="row g-4">
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="card h-100 shadow-sm border-light-subtle">
+                  <img src="images/baiterek.jpeg" class="card-img-top card-thumb" alt="Baiterek monument" />
+                  <div class="card-body d-flex flex-column p-4">
+                    <h3 class="h5 card-title fw-bold text-teal">Baiterek</h3>
+                    <p class="card-text text-secondary mb-4">
+                      Start in the city centre with one of Astana’s most recognisable landmarks and observation decks.
+                    </p>
+                    <a href="places.html#baiterek" class="btn btn-teal mt-auto">Discover Baiterek</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="card h-100 shadow-sm border-light-subtle">
+                  <img src="images/khan_shatyr.jpeg" class="card-img-top card-thumb" alt="Khan Shatyr" />
+                  <div class="card-body d-flex flex-column p-4">
+                    <h3 class="h5 card-title fw-bold text-teal">Khan Shatyr</h3>
+                    <p class="card-text text-secondary mb-4">Take a break, find something to eat and explore this unique transparent tent-style structure.</p>
+                    <a href="places.html#khan-shatyr" class="btn btn-teal mt-auto">Explore Khan Shatyr</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="card h-100 shadow-sm border-light-subtle">
+                  <img src="images/national_museum.jpeg" class="card-img-top card-thumb" alt="National Museum" />
+                  <div class="card-body d-flex flex-column p-4">
+                    <h3 class="h5 card-title fw-bold text-teal">National Museum</h3>
+                    <p class="card-text text-secondary mb-4">Explore thousands of years of Kazakh history, archaeological treasures, and contemporary art.</p>
+                    <a href="places.html#museum" class="btn btn-teal mt-auto">Visit Museum</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Task 2: Accordion for FAQs -->
+          <section class="mb-5" id="faq">
+            <div class="mb-3">
+              <h2 class="h3 fw-bold text-teal mb-1">Frequently Asked Questions</h2>
+              <p class="text-secondary small mb-0">Click on any question below to reveal the answer.</p>
+            </div>
+
+            <div class="custom-accordion" id="faqAccordion">
+              <div class="custom-accordion-item">
+                <button type="button" class="custom-accordion-header">
+                  <span>How can I book a guided tour?</span>
+                  <span class="custom-accordion-icon">+</span>
+                </button>
+                <div class="custom-accordion-body">
+                  <div class="custom-accordion-content">
+                    You can book directly via our <a href="contact.html">Contact Form</a> or reach out through the quick subscription popup in the navigation bar. Our team confirms all bookings within 2 hours.
+                  </div>
+                </div>
+              </div>
+
+              <div class="custom-accordion-item">
+                <button type="button" class="custom-accordion-header">
+                  <span>What is the best time to visit the Baiterek observation tower?</span>
+                  <span class="custom-accordion-icon">+</span>
+                </button>
+                <div class="custom-accordion-body">
+                  <div class="custom-accordion-content">
+                    Sunset (around 6:30 PM to 8:00 PM) is the ideal time. You will experience panoramic views in daylight and see the city illuminated as night falls.
+                  </div>
+                </div>
+              </div>
+
+              <div class="custom-accordion-item">
+                <button type="button" class="custom-accordion-header">
+                  <span>Are discounts available for students and large groups?</span>
+                  <span class="custom-accordion-icon">+</span>
+                </button>
+                <div class="custom-accordion-body">
+                  <div class="custom-accordion-content">
+                    Yes! University students receive a 20% discount with a valid student ID card, and groups of 5 or more receive a special group rate.
+                  </div>
+                </div>
+              </div>
+
+              <div class="custom-accordion-item">
+                <button type="button" class="custom-accordion-header">
+                  <span>Is transfer transportation included in the tour packages?</span>
+                  <span class="custom-accordion-icon">+</span>
+                </button>
+                <div class="custom-accordion-body">
+                  <div class="custom-accordion-content">
+                    All 4-hour (Culture Day) and 6-hour (Full Astana) tour packages include air-conditioned shuttle transfers between city landmarks.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5 mt-lg-4 text-center" id="author">
+            <h2 class="h3 fw-bold text-teal mb-4">About the Author</h2>
+            <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-8 col-12">
+                <div class="card border-light-subtle shadow-sm p-4">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="images/askhat.jpeg" alt="Bilyalov Askhat" class="rounded-circle border border-2 border-teal object-fit-cover author-img mb-3" />
+                    <h3 class="h5 fw-bold mb-1 text-teal">Bilyalov Askhat</h3>
+                    <p class="text-secondary mb-0">Frontend Development · SE-2514</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-bg text-white py-4 mt-5">
+      <div class="container text-center">
+        <div class="row gy-3">
+          <div class="col-12 col-md-6 text-md-start">
+            <strong class="fs-5">Astana Travel</strong>
+            <p class="small text-white-50 mb-0">Places and routes in Astana.</p>
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <p class="mb-1">Bilyalov Askhat</p>
+            <p class="small text-white-50 mb-0">SE-2514 · 2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Task 3: Popup Subscription Form Modal -->
+    <div id="subscriptionModal" class="custom-modal-overlay" style="display: none;">
+      <div class="custom-modal-box">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="h5 fw-bold text-teal mb-0">Subscribe to Astana Travel</h3>
+          <button type="button" id="closeModalBtn" class="btn-close" aria-label="Close"></button>
+        </div>
+        <p class="text-secondary small mb-3">
+          Get exclusive tour discounts, seasonal guides, and Astana event notifications directly in your inbox.
+        </p>
+        <form id="popupSubscribeForm" novalidate>
+          <div class="mb-3">
+            <label for="popupEmail" class="form-label fw-semibold">Email address *</label>
+            <input
+              type="email"
+              id="popupEmail"
+              class="form-control"
+              placeholder="name@example.com"
+              required
+            />
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <button type="submit" class="btn btn-teal w-100">Subscribe Now</button>
+        </form>
+        <div id="popupSuccessMsg" class="alert alert-success mt-3 py-2 small" style="display: none;">
+          🎉 Thank you for subscribing! Check your inbox soon.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
